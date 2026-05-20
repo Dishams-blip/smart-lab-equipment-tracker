@@ -7,65 +7,90 @@
 
     <style>
 
-        body {
+        body{
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #dbeafe, #eff6ff);
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
+        h1{
+            text-align: center;
+            color: #1e3a8a;
+            margin-top: 30px;
+            font-size: 45px;
         }
 
-        form {
+        form{
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            margin-bottom: 30px;
-            box-shadow: 0px 0px 10px lightgray;
+            padding: 30px;
+            border-radius: 15px;
+            width: 450px;
+            margin: 30px auto;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
         }
 
-        input, select {
+        input, select{
             width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        button {
+            padding: 12px;
             margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button{
+            margin-top: 20px;
             width: 100%;
-            padding: 10px;
-            background-color: black;
+            padding: 12px;
+            background: #2563eb;
             color: white;
             border: none;
+            border-radius: 8px;
+            font-size: 18px;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #333;
+        button:hover{
+            background: #1d4ed8;
         }
 
-        table {
-            width: 100%;
+        table{
+            width: 90%;
+            margin: 30px auto;
             border-collapse: collapse;
             background: white;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        th {
-            background: black;
+        th{
+            background: #111827;
             color: white;
+            padding: 15px;
+            font-size: 18px;
         }
 
-        th, td {
+        th, td{
             padding: 15px;
             border: 1px solid #ddd;
             text-align: center;
         }
 
-        .low-stock {
+        tr:hover{
+            background: #f3f4f6;
+        }
+
+        .low-stock{
             color: red;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .ok-stock{
+            color: green;
             font-weight: bold;
         }
 
@@ -143,7 +168,9 @@
 
                 {% else %}
 
-                    OK
+                    <span class="ok-stock">
+                        ✅ OK
+                    </span>
 
                 {% endif %}
 
